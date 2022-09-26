@@ -3,8 +3,8 @@ name: Todo App Build Test
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  # pull_request:
+  #  branches: [ master ]
 
 jobs:
   build_and_test:
@@ -31,6 +31,7 @@ jobs:
       run: sudo docker image push ravennaras/sdc:todo
   deployment:
     runs-on: self-hosted
+    needs: build_and_test
     steps:
     - name: Pull docker image
       run: sudo docker pull ravennaras/sdc:todo
