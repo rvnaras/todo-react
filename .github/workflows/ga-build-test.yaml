@@ -25,7 +25,9 @@ jobs:
       run: npm test
     - name: Build docker image
       run: sudo docker image build -f -t sdc:todo .
+    - name: Tag docker image
       run: sudo docker image tag sdc:todo ravennaras/sdc:todo
+    - name: Push docker image
       run: sudo docker image push ravennaras/sdc:todo
     - name: Setup Security scan
       run: sudo apt-get install trivy
