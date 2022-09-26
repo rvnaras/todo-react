@@ -24,7 +24,7 @@ jobs:
     - name: Test project
       run: npm test
     - name: Build docker image
-      run: sudo docker image build -f -t sdc:todo .
+      run: sudo docker image build -t sdc:todo .
     - name: Tag docker image
       run: sudo docker image tag sdc:todo ravennaras/sdc:todo
     - name: Push docker image
