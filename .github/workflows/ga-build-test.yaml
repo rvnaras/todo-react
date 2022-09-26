@@ -8,7 +8,7 @@ on:
 
 jobs:
   build_and_test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - name: Cloning project
       uses: actions/checkout@v2
