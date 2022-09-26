@@ -30,6 +30,6 @@ jobs:
     # - name: Push docker image
     #   run: sudo docker image push ravennaras/sdc:todo
     - name: Pull docker image
-      run: docker pull ravennaras/sdc:todo
+      run: sudo docker pull ravennaras/sdc:todo
     - name: Run docker container
-      run: docker run -d ravennaras/sdc:todo
+      run: sudo docker run -d ravennaras/sdc:todo
