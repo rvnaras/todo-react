@@ -29,7 +29,6 @@ jobs:
       run: sudo docker image tag sdc:todo ravennaras/sdc:todo
     - name: Push docker image
       run: sudo docker image push ravennaras/sdc:todo
-jobs:
   deployment:
     runs-on: self-hosted
     steps:
